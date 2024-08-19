@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>this is a test</title>
+    <link href='style.css' rel='stylesheet' type='text/css'/>
+  </head>
+  
+  <body style='background-color:red; border:5px double black'>
+    <style>
+      .complex_button{
+        background-color:DodgerBlue;
+        -webkit- border-radius:5px;
+        border-radius:5px;
+        color:black;
+        padding:2px 5px;
+        text-aling:center;
+        display:inline-block;
+        box-shadow:0 0 10px DodgerBlue;;
+        postion:absolute;
+        width:120px;
+        hight:60px;
+      }
+      .pythonText{
+        background-color:DodgerBlue;
+        color:red;
+      }
+    </style>
+    <h1 style='color:black; text-align:center; box-shadow: 0 0 5px black'>this is a header</h1>
+    <h2 style='color:green; text-align:center;'>this is a secondary header</h2>
+    <p style='color:black; text-align:center;font-size:23px; box-shadow: 0 0 20px blue'>this is a new text</p>
+    <h2 style='color:yellow; text-align:center;'>scroll down more below</h2>
+    <div style='text-align:center'>
+      <button style='background-color:blue;color:black; box-shadow: 0 0 5px yellow;padding:20px 20px;-webkit- border-radius: 5px;border-radius: 5px;' id='button'>this is a button</button>
+    </div>
+    <img src='html_logo.png' style='text-align:center;'>
+    <p style='color:black; text-align:left;font-size:20px;'>this is a image above</p>
+    <h2 style='color:black; text-align:right;'>made form 100% python</h2>
+    <i style='color:black; text-align:center;font-size:23px;'>this is a italic text</i>
+    <b style='color:black; text-align:right;font-size:20px;'>this is a bold text</b>
+    <p style='color:black; text-align:left;font-size:20px;'>bold does not creat new line</p>
+    <p style='color:black; text-align:center;font-size:26px;'>💀replit is dying💀!</p>
+    <div style='text-align:center'>
+    <button class='complex_button' id='buttonId'>button made with css class</button>
+    </div>
+    <p class='changetext'>This is a animation</p>
+    <u class='changetext'>This is made with python too. :)</u>
+    <script src='https://replit.com/public/js/replit-badge-v2.js' theme='dark' position='bottom-right'></script>
+    <script>
+     document.getElementById('buttonId').addEventListener('click', function() {
+       var xhr = new XMLHttpRequest();
+         xhr.open('GET', 'your Link', true);
+             xhr.onload = function() {
+                if (xhr.status === 200) {
+                   var result = xhr.responseText;
+                   // Update the web page with the result
+                   console.log('Status: '+result);
+                 } else {
+                  console.log('Request failed. Status: ' + xhr.status);
+                }
+            };
+          xhr.send();
+        });
+    </script>
+  </body>
+</html>

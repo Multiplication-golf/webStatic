@@ -1,0 +1,43 @@
+entrypoint = "main.py"
+modules = ["python-3.10:v18-20230807-322e88b"]
+
+hidden = [".pythonlibs","htmlpywrite.py"]
+
+[nix]
+channel = "stable-23_05"
+
+[unitTest]
+language = "python3"
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[languages.html]
+pattern = ".pythonlibs/lib/python3.10/site-packages/htmlpywrite/index.html"
+
+[languages.html.languageServer]
+start = "vscode-html-language-server --stdio"
+
+[languages.html.languageServer.initializationOptions]
+provideFormatter = true
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
+  [languages.javascript.languageServer]
+  start = "typescript-language-server --stdio"
+
+[languages.css]
+pattern = "**/{*.less,*.scss,*.css}"
+
+[languages.css.languageServer]
+start = "vscode-css-language-server --stdio"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+

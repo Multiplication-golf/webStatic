@@ -1,0 +1,8 @@
+.changetext{
+  font-size:53px+;
+  animation:change_text 5s infinite;
+}
+@keyframes change_text{
+      0% {color: green; margin-left: 0px;}
+      100% {color: blue; margin-left: 925px;}
+}
